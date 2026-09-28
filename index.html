@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="VaPaDONF — aide au choix de génotypes d'igname à partir des données expérimentales historiques.">
+  <title>VaPaDONF — choix de génotype d'igname</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="brand-wrap">
+    <img class="site-logo" src="images/logos/vapadonf_logo.png" alt="Logo VaPaDONF">
+    <div>
+      <p class="eyebrow">Outil d'aide à la décision</p>
+      <h1>VaPaDONF</h1>
+      <p class="lead">Choix de génotypes d'igname selon la zone de production, l'espèce, les priorités de l'utilisateur, la couleur de chair et le calibre recherché.</p>
+    </div>
+  </div>
+  <nav class="header-links">
+    <a href="info.html">Plus d'information</a>
+  </nav>
+</header>
+
+<main id="app" class="page">
+  <form id="preferences" class="form-grid" novalidate>
+    <section class="panel">
+      <span class="step">1</span><h2>Zone de production</h2>
+      <p class="section-subtitle">Choisissez la ou les zones de culture correspondant à votre situation. Cette sélection conditionne les situations expérimentales retenues pour le classement.</p>
+      <div class="zone-hero zone-hero-enhanced">
+        <div class="zone-map-wrap zone-map-static-wrap">
+          <img id="zone-map-image" class="zone-map-static" src="images/ui/map_none.svg" alt="Carte des zones de production en Guadeloupe">
+        </div>
+      </div>
+      <p class="help">Affichage cartographique : carte neutre lorsqu’aucune zone n’est sélectionnée, carte Basse-Terre lorsque seule la zone BT est cochée, carte Grande-Terre / Marie-Galante lorsque seule la zone GT + MG est cochée, et carte combinée lorsque les deux zones sont sélectionnées.</p>
+      <div class="choices two">
+        <label class="choice"><input type="checkbox" name="zone" value="BT"><span><strong>Basse-Terre</strong><small>Zone BT</small></span></label>
+        <label class="choice"><input type="checkbox" name="zone" value="GT"><span><strong>Grande-Terre et Marie-Galante</strong><small>Zones GT + MG</small></span></label>
+      </div>
+    </section>
+
+    <section class="panel">
+      <span class="step">2</span><h2>Espèce recherchée</h2>
+      <p class="section-subtitle">Sélectionnez le groupe d'ignames que vous souhaitez explorer. Les photos et textes ci-dessous aident à distinguer les deux espèces considérées dans l'outil.</p>
+      <div class="species-hero reading">
+        <figure class="species-tile reading"><img src="images/ui/alata1.png" alt="Photo de Dioscorea alata"></figure>
+        <figure class="species-tile reading"><img src="images/ui/rotundata1.png" alt="Photo de Dioscorea rotundata"></figure>
+      </div>
+      <div class="choices two compact-choice-text">
+        <label class="choice"><input type="checkbox" name="species" value="Da"><span><strong><em>Dioscorea alata</em></strong><small>21 génotypes dans le référentiel</small></span></label>
+        <label class="choice"><input type="checkbox" name="species" value="Dr"><span><strong><em>Dioscorea rotundata</em></strong><small>7 génotypes dans le référentiel</small></span></label>
+      </div>
+    </section>
+
+    <section class="panel full">
+      <span class="step">3</span><h2>Importance des critères</h2>
+      <p class="section-subtitle">Attribuez un niveau d'importance à chacun des cinq grands critères. Plus un critère est jugé important, plus il pèsera dans la note finale.</p>
+      <div id="criteria-grid" class="criteria-grid"></div>
+    </section>
+
+    <section class="panel full">
+      <span class="step">4</span><h2>Couleur de chair</h2>
+      <p class="section-subtitle">Indiquez votre niveau d'acceptation pour chaque couleur de chair. La logique historique de l'outil est conservée : une couleur appréciée est avantagée, une couleur tolérée est légèrement pénalisée et une couleur jugée inacceptable dégrade fortement la note qualité.</p>
+      <div id="colors-grid" class="color-grid"></div>
+    </section>
+
+    <section class="panel full">
+      <span class="step">5</span><h2>Calibre commercialisable</h2>
+      <p class="section-subtitle">Définissez la plage de poids des tubercules que vous considérez comme commercialisables. Cette plage alimente l'indicateur basé sur le rendement commercial.</p>
+      <div class="calibre-grid">
+        <label>Poids minimum <span><input id="calibre-min" type="number" min="1" max="5000" step="10" value="300"> g</span></label>
+        <label>Poids maximum <span><input id="calibre-max" type="number" min="0.1" max="10" step="0.1" value="3"> kg</span></label>
+      </div>
+      <div class="slider-shell">
+        <div class="dual-slider">
+          <div id="slider-fill" class="slider-fill"></div>
+          <input id="calibre-min-range" type="range" min="1" max="5000" step="10" value="300" aria-label="Calibre minimum en grammes">
+          <input id="calibre-max-range" type="range" min="100" max="10000" step="100" value="3000" aria-label="Calibre maximum en grammes">
+        </div>
+        <div class="calibre-track"><span id="calibre-label">300 g — 3,0 kg</span></div>
+      </div>
+    </section>
+
+    <div class="actions full">
+      <button id="calculate" class="primary" type="submit">Calculer le classement</button>
+      <button id="reset" class="secondary" type="button">Réinitialiser</button>
+      <span id="form-message" class="message" role="status"></span>
+    </div>
+  </form>
+
+  <section id="results" class="results" hidden>
+    <div class="section-heading">
+      <div><p class="eyebrow">Résultats</p><h2>Classement selon vos préférences</h2></div>
+      <button id="print-report" class="primary" type="button">Créer le rapport PDF</button><p class="print-help">Astuce impression : pour supprimer complètement les en-têtes et pieds de page ajoutés par le navigateur, décochez l’option correspondante dans la boîte d’impression.</p>
+    </div>
+    <div id="selection-summary" class="summary-strip"></div>
+
+    <section class="panel">
+      <p class="help">La note globale est désormais affichée telle qu'elle est calculée à partir des pondérations utilisateur, sans réétalonnage entre 0 et 10 sur le seul sous-ensemble filtré. Cela évite d'écraser artificiellement les écarts entre variétés.</p>
+      <div class="table-wrap">
+        <table class="ranking-table">
+          <thead><tr><th>Rang</th><th>Variété</th><th>Espèce</th><th>Type</th><th>Score / 10</th><th>Fiche</th></tr></thead>
+          <tbody id="ranking-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel comparison-panel">
+      <h2>Comparer 2 variétés</h2>
+      <p class="subtle">Comparaison de la meilleure variété améliorée avec la meilleure variété traditionnelle dans les conditions spécifiées par l'utilisateur.</p>
+      <div class="compare-controls">
+        <label>Variété améliorée<select id="compare-improved"></select></label>
+        <label>Variété témoin<select id="compare-traditional"></select></label>
+      </div>
+      <div id="comparison" class="comparison-grid"></div>
+      <div class="tabs-wrap">
+        <div class="tab-list" role="tablist" aria-label="Résultats détaillés">
+          <button class="tab-button active" type="button" data-tab="global" role="tab" aria-selected="true">1. Performances globales</button>
+          <button class="tab-button" type="button" data-tab="yield" role="tab" aria-selected="false">2. Rendement</button>
+          <button class="tab-button" type="button" data-tab="risk" role="tab" aria-selected="false">3. Variabilité et risque</button>
+          <button class="tab-button" type="button" data-tab="weed" role="tab" aria-selected="false">4. Adventices</button>
+          <button class="tab-button" type="button" data-tab="report" role="tab" aria-selected="false">5. Rapport</button>
+        </div>
+        <section id="tab-global" class="tab-panel active" role="tabpanel">
+          <h3>Performances globales</h3>
+          <p class="viz-help">Le spider plot compare les deux variétés sur les cinq grandes dimensions évaluées. Plus la forme s'étend vers l'extérieur, plus la variété est performante sur la dimension concernée. La couleur de chair influence la dimension « Qualité du tubercule » en fonction de vos préférences.</p>
+          <div id="viz-radar"></div>
+        </section>
+        <section id="tab-yield" class="tab-panel" role="tabpanel" hidden>
+          <h3>Comparaison des rendements entre sites et années</h3>
+          <p class="viz-help">Le graphique compare les rendements dans les seules situations appartenant à la zone sélectionnée. Lorsqu'il existe des situations communes entre les deux variétés, elles sont privilégiées pour la comparaison.</p>
+          <div id="viz-yield"></div>
+          <p id="viz-yield-note" class="chart-note"></p>
+        </section>
+        <section id="tab-risk" class="tab-panel" role="tabpanel" hidden>
+          <h3>Variation du rendement entre années et sites</h3>
+          <p class="viz-help">Ce graphique aide à interpréter le niveau de risque : une variété très productive mais très irrégulière n'offre pas la même sécurité qu'une variété un peu moins productive mais plus stable.</p>
+          <div id="viz-risk"></div>
+          <p id="viz-risk-note" class="chart-note"></p>
+        </section>
+        <section id="tab-weed" class="tab-panel" role="tabpanel" hidden>
+          <h3>Dynamique de recouvrement</h3>
+          <p class="viz-help">Le graphique montre comment le couvert se ferme après émergence. Une variété qui ferme rapidement et fortement le couvert aide davantage à limiter l'installation des adventices.</p>
+          <div id="viz-adventices"></div>
+          <p id="viz-adv-note" class="chart-note"></p>
+        </section>
+        <section id="tab-report" class="tab-panel" role="tabpanel" hidden>
+          <h3>Rapport</h3>
+          <p class="viz-help">Le rapport reprend vos choix, le classement, les visuels de comparaison et les illustrations utiles pour l'interprétation. Cliquez ci-dessous pour lancer l'impression puis « Enregistrer au format PDF » dans votre navigateur.</p>
+          <button id="print-report-inline" class="primary" type="button">Créer le rapport PDF</button><p class="print-help">Astuce impression : pour supprimer complètement les en-têtes et pieds de page ajoutés par le navigateur, décochez l’option correspondante dans la boîte d’impression.</p>
+        </section>
+      </div>
+    </section>
+  </section>
+</main>
+
+<section id="report" class="print-report" aria-hidden="true"></section>
+<footer class="site-footer">VaPaDONF · données expérimentales historiques RITA · <a href="info.html">Plus d'information</a></footer>
+<script src="data/genotypes.js"></script>
+<script src="data/model-data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

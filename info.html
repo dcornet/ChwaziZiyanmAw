@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>VaPaDONF — Plus d'information</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="brand-wrap">
+    <img class="site-logo" src="images/logos/vapadonf_logo.png" alt="Logo VaPaDONF">
+    <div>
+      <p class="eyebrow">Outil d'aide à la décision</p>
+      <h1>VaPaDONF</h1>
+      <p class="lead">Informations sur le projet, les partenaires, les ressources variétales et l'historique de l'outil.</p>
+    </div>
+  </div>
+  <nav class="header-links">
+    <a href="index.html">Retour à l'outil</a>
+  </nav>
+</header>
+<main class="info-page">
+  <section class="info-hero">
+    <img src="images/logos/vapadonf_logo.png" alt="Logo VaPaDONF">
+    <div>
+      <h2>À propos de VaPaDONF</h2>
+      <p>VaPaDONF est un outil d'aide au choix variétal pour l'igname. Il valorise un jeu de données historique issu des évaluations multi-sites et multi-années conduites en Guadeloupe afin d'aider les techniciens et producteurs à raisonner le choix des génotypes selon leurs priorités : production, résistance aux maladies, conservation, qualité du tubercule et tolérance aux adventices.</p>
+      <p>Cette version statique a été réimplémentée pour être hébergée facilement sur GitHub Pages tout en conservant l'esprit de l'application Shiny d'origine.</p>
+    </div>
+  </section>
+
+  <section class="info-grid">
+    <article class="panel">
+      <h2>Le projet en quelques mots</h2>
+      <p>Le socle de données et l'approche multicritère s'inscrivent dans la dynamique des projets RITA autour des cultures racines et tubercules aux Antilles. L'objectif est de capitaliser les essais variétaux pour proposer un appui pratique au terrain.</p>
+      <ul class="simple-list">
+        <li>identifier des variétés adaptées à différents contextes de production ;</li>
+        <li>mettre en perspective plusieurs dimensions d'évaluation : rendement, santé, conservation, qualité et concurrence vis-à-vis des adventices ;</li>
+        <li>faciliter l'accès aux fiches variétales et aux ressources de référence.</li>
+      </ul>
+    </article>
+    <article class="panel">
+      <h2>Ressources variétales</h2>
+      <p>Lorsque l'information est disponible, chaque variété peut être reliée à une fiche variétale PDF et à une ressource Florilège du CRB Plantes Tropicales (avec rappel du code historique CRB-PT).</p>
+      <ul class="simple-list">
+        <li><a href="fiches-varietales/" target="_blank" rel="noopener">Répertoire local des fiches variétales (PDF)</a></li>
+        <li><a href="https://florilege.arcad-project.org/fr/accessions/OLGA-117" target="_blank" rel="noopener">Collection Igname sur Florilège (OLGA-117)</a></li>
+      </ul>
+      <p class="info-note">Les liens externes repris dans l'outil s'appuient sur le fichier historique <code>ListVarFichVar.csv</code> retrouvé dans la sauvegarde du projet et sur la table de correspondance vers les identifiants Florilège (OLGA) reconstituée pour cette réimplémentation.</p>
+    </article>
+  </section>
+
+  <section class="info-grid" style="margin-top:18px">
+    <article class="panel">
+      <h2>Partenaires</h2>
+      <p>Le projet mobilise des partenaires techniques, scientifiques et professionnels impliqués dans l'amélioration variétale et l'accompagnement des filières en Guadeloupe.</p>
+      <div class="logos-grid">
+        <div class="logo-card"><img src="images/logos/logo_cirad.png" alt="CIRAD"></div>
+        <div class="logo-card"><img src="images/logos/logo_INRA.png" alt="INRA"></div>
+        <div class="logo-card"><img src="images/logos/logo_CA_Guadeloupe.png" alt="Chambre d'Agriculture Guadeloupe"></div>
+        <div class="logo-card"><img src="images/logos/logo_IT2.png" alt="IT2"></div>
+        <div class="logo-card"><img src="images/logos/logo_EPLEFPA.png" alt="EPLEFPA"></div>
+        <div class="logo-card"><img src="images/logos/logo_sicapag.png" alt="SICAPAG"></div>
+      </div>
+    </article>
+    <article class="panel">
+      <h2>Référence historique</h2>
+      <p>La réimplémentation statique s'appuie sur l'archive du développement R/Shiny initial, notamment le travail réalisé dans le cadre du stage de M2 de <b>Lesmond Elkana</b>.</p>
+      <p>Dépôt GitHub historique retrouvé dans la sauvegarde :</p>
+      <p><a href="https://github.com/elkana972/Projet_Rita" target="_blank" rel="noopener">github.com/elkana972/Projet_Rita</a></p>
+      <p class="info-note">Cette mention est volontairement conservée pour documenter l'origine de l'outil, garder la trace de l'implémentation RShiny et faciliter le lien avec l'historique du projet.</p>
+    </article>
+  </section>
+
+  <section class="panel" style="margin-top:18px">
+    <h2>Correspondance CRB-PT → Florilège</h2>
+    <p class="info-note">Table de correspondance utilisée dans cette version pour les variétés dont l'identifiant OLGA a été établi.</p>
+    <div class="table-wrap">
+      <table class="info-table">
+        <thead><tr><th>Génotype</th><th>Code CRB-PT</th><th>Identifiant OLGA</th><th>Fiche Florilège</th></tr></thead>
+        <tbody>
+          <tr><td>Goana</td><td>PT-IG-00025</td><td>OLGA-19694</td><td><a href="https://florilege.arcad-project.org/fr/accession/OLGA-19694" target="_blank" rel="noopener">OLGA-19694</a></td></tr>
+          <tr><td>Kinabayo</td><td>PT-IG-00077</td><td>OLGA-19746</td><td><a href="https://florilege.arcad-project.org/fr/accession/OLGA-19746" target="_blank" rel="noopener">OLGA-19746</a></td></tr>
+          <tr><td>Grosse Caille</td><td>PT-IG-00119</td><td>OLGA-19788</td><td><a href="https://florilege.arcad-project.org/fr/accession/OLGA-19788" target="_blank" rel="noopener">OLGA-19788</a></td></tr>
+          <tr><td>Pacala</td><td>PT-IG-00350</td><td>OLGA-19686</td><td><a href="https://florilege.arcad-project.org/fr/accession/OLGA-19686" target="_blank" rel="noopener">OLGA-19686</a></td></tr>
+          <tr><td>Roujol</td><td>PT-IG-00686</td><td>OLGA-20355</td><td><a href="https://florilege.arcad-project.org/fr/accession/OLGA-20355" target="_blank" rel="noopener">OLGA-20355</a></td></tr>
+          <tr><td>INRAAL56</td><td>PT-IG-00688</td><td>—</td><td>—</td></tr>
+          <tr><td>Nureangdan</td><td>PT-IG-00689</td><td>—</td><td>—</td></tr>
+          <tr><td>INRAAL18</td><td>PT-IG-00690</td><td>—</td><td>—</td></tr>
+          <tr><td>Tibou</td><td>PT-IG-00691</td><td>OLGA-20360</td><td><a href="https://florilege.arcad-project.org/fr/accession/OLGA-20360" target="_blank" rel="noopener">OLGA-20360</a></td></tr>
+          <tr><td>Karukinra / INRAX154</td><td>PT-IG-00692</td><td>—</td><td>—</td></tr>
+          <tr><td>Caribinra / INRAX17</td><td>PT-IG-00693</td><td>—</td><td>—</td></tr>
+          <tr><td>Dou</td><td>PT-IG-00694</td><td>OLGA-20363</td><td><a href="https://florilege.arcad-project.org/fr/accession/OLGA-20363" target="_blank" rel="noopener">OLGA-20363</a></td></tr>
+          <tr><td>Gwadinra / INRAX142</td><td>PT-IG-00695</td><td>—</td><td>—</td></tr>
+          <tr><td>Ciradienne</td><td>PT-IG-00696</td><td>OLGA-20365</td><td><a href="https://florilege.arcad-project.org/fr/accession/OLGA-20365" target="_blank" rel="noopener">OLGA-20365</a></td></tr>
+          <tr><td>TiViolet</td><td>PT-IG-00697</td><td>OLGA-20366</td><td><a href="https://florilege.arcad-project.org/fr/accession/OLGA-20366" target="_blank" rel="noopener">OLGA-20366</a></td></tr>
+          <tr><td>Malalagi</td><td>PT-IG-00698</td><td>OLGA-20367</td><td><a href="https://florilege.arcad-project.org/fr/accession/OLGA-20367" target="_blank" rel="noopener">OLGA-20367</a></td></tr>
+          <tr><td>Coco</td><td>PT-IG-00699</td><td>OLGA-20368</td><td><a href="https://florilege.arcad-project.org/fr/accession/OLGA-20368" target="_blank" rel="noopener">OLGA-20368</a></td></tr>
+          <tr><td>Belo</td><td>PT-IG-00700</td><td>OLGA-20369</td><td><a href="https://florilege.arcad-project.org/fr/accession/OLGA-20369" target="_blank" rel="noopener">OLGA-20369</a></td></tr>
+          <tr><td>TiClair</td><td>PT-IG-00701</td><td>OLGA-20370</td><td><a href="https://florilege.arcad-project.org/fr/accession/OLGA-20370" target="_blank" rel="noopener">OLGA-20370</a></td></tr>
+          <tr><td>Manlankon</td><td>PT-IG-00702</td><td>—</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+</main>
+<footer class="site-footer">VaPaDONF · page d'information</footer>
+</body>
+</html>

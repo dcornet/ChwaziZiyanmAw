@@ -1,0 +1,571 @@
+window.VAPADONF_GENOTYPES = {
+  "schema_version": 2,
+  "description": "Concordance canonique des 28 génotypes utilisés par VaPaDONF, avec alias compatibles avec les nomenclatures réellement observées dans les fichiers source.",
+  "conventions": {
+    "nom": "Nom vernaculaire à afficher en priorité.",
+    "espece": "Da = Dioscorea alata ; Dr = Dioscorea rotundata. Dr remplace le code legacy Dcr dans la nouvelle application.",
+    "code_ou_origine": "Troisième segment du nom de la fiche variétale : code du génotype/hybride ou origine lorsque la fiche est nommée ainsi.",
+    "identifiant_moteur": "Identifiant canonique utilisé par l'ancien moteur après normalisation.",
+    "code_donnees_legacy": "Identifiant de la colonne Var dans ListVar.csv, utilisé pour raccorder les anciens jeux de données avant normalisation.",
+    "fiche_url_relative": "Chemin relatif proposé pour rendre la fiche téléchargeable depuis GitHub Pages.",
+    "espece_legacy": "Code d'espèce historique présent dans les CSV : Da ou Dcr.",
+    "aliases_donnees": "Valeurs de Var à accepter lors de l'import des anciens fichiers ; l'identification ne doit pas dépendre de Sp.",
+    "fiche_pdf_source": "Nom du PDF actuellement fourni par l'utilisateur lorsque celui-ci diffère du nom canonique retenu.",
+    "fiche_pdf": "Nom canonique recommandé dans le futur dépôt GitHub Pages."
+  },
+  "effectif": {
+    "total": 28,
+    "Da": 21,
+    "Dr": 7
+  },
+  "genotypes": [
+    {
+      "nom": "Alano",
+      "espece": "Da",
+      "nom_scientifique": "Dioscorea alata",
+      "code_ou_origine": "INRAAL51",
+      "identifiant_moteur": "ALANO",
+      "code_donnees_legacy": "INRAAL51",
+      "fiche_pdf": "Alano_Da_INRAAL51.pdf",
+      "fiche_url_relative": "fiches-varietales/Alano_Da_INRAAL51.pdf",
+      "espece_legacy": "Da",
+      "aliases_donnees": [
+        "ALANO",
+        "INRAAL51"
+      ],
+      "especes_observees_donnees": [
+        "Da"
+      ]
+    },
+    {
+      "nom": "AnBaBon",
+      "espece": "Da",
+      "nom_scientifique": "Dioscorea alata",
+      "code_ou_origine": "TraditionnelleTahiti",
+      "identifiant_moteur": "ANBABON",
+      "code_donnees_legacy": "ANBABON",
+      "fiche_pdf": "AnBaBon_Da_TraditionnelleTahiti.pdf",
+      "fiche_url_relative": "fiches-varietales/AnBaBon_Da_TraditionnelleTahiti.pdf",
+      "espece_legacy": "Da",
+      "aliases_donnees": [
+        "ANBABON"
+      ],
+      "especes_observees_donnees": [
+        "Da"
+      ]
+    },
+    {
+      "nom": "Belo",
+      "espece": "Dr",
+      "nom_scientifique": "Dioscorea rotundata",
+      "code_ou_origine": "CIRAD11M",
+      "identifiant_moteur": "BELO",
+      "code_donnees_legacy": "CIRAD11M",
+      "fiche_pdf": "Belo_Dr_CIRAD11M.pdf",
+      "fiche_url_relative": "fiches-varietales/Belo_Dr_CIRAD11M.pdf",
+      "espece_legacy": "Dcr",
+      "aliases_donnees": [
+        "BELO",
+        "CIRAD11M"
+      ],
+      "especes_observees_donnees": [
+        "Dcr"
+      ]
+    },
+    {
+      "nom": "Caribinra",
+      "espece": "Da",
+      "nom_scientifique": "Dioscorea alata",
+      "code_ou_origine": "INRAX17",
+      "identifiant_moteur": "INRAX17",
+      "code_donnees_legacy": "INRAX17",
+      "fiche_pdf": "Caribinra_Da_INRAX17.pdf",
+      "fiche_url_relative": "fiches-varietales/Caribinra_Da_INRAX17.pdf",
+      "espece_legacy": "Da",
+      "aliases_donnees": [
+        "INRAX17"
+      ],
+      "especes_observees_donnees": [
+        "Da"
+      ]
+    },
+    {
+      "nom": "Ciradienne",
+      "espece": "Da",
+      "nom_scientifique": "Dioscorea alata",
+      "code_ou_origine": "CIRADH4X438",
+      "identifiant_moteur": "CIRADIENNE",
+      "code_donnees_legacy": "CIRADH4X438",
+      "fiche_pdf": "Ciradienne_Da_CIRADH4X438.pdf",
+      "fiche_url_relative": "fiches-varietales/Ciradienne_Da_CIRADH4X438.pdf",
+      "note_concordance": "CIRADH4X438 est retenu comme code canonique car il est celui de ListVar.csv, ListVarFichVar.csv et des données historiques. Renommer le PDF source H4X131 en H4X438 lors de l'import.",
+      "espece_legacy": "Da",
+      "aliases_donnees": [
+        "CIRADH4X438",
+        "CIRADIENNE"
+      ],
+      "especes_observees_donnees": [
+        "Da"
+      ],
+      "fiche_pdf_source": "Ciradienne_Da_CIRADH4X131.pdf"
+    },
+    {
+      "nom": "Coco",
+      "espece": "Dr",
+      "nom_scientifique": "Dioscorea rotundata",
+      "code_ou_origine": "CIRAD47M",
+      "identifiant_moteur": "COCO",
+      "code_donnees_legacy": "CIRAD47M",
+      "fiche_pdf": "Coco_Dr_CIRAD47M.pdf",
+      "fiche_url_relative": "fiches-varietales/Coco_Dr_CIRAD47M.pdf",
+      "espece_legacy": "Dcr",
+      "aliases_donnees": [
+        "CIRAD47M",
+        "COCO"
+      ],
+      "especes_observees_donnees": [
+        "Dcr"
+      ]
+    },
+    {
+      "nom": "Dou",
+      "espece": "Da",
+      "nom_scientifique": "Dioscorea alata",
+      "code_ou_origine": "CIRADH4X431",
+      "identifiant_moteur": "DOU",
+      "code_donnees_legacy": "CIRADH4X431",
+      "fiche_pdf": "Dou_Da_CIRADH4X431.pdf",
+      "fiche_url_relative": "fiches-varietales/Dou_Da_CIRADH4X431.pdf",
+      "espece_legacy": "Da",
+      "aliases_donnees": [
+        "CIRADH4X431",
+        "DOU"
+      ],
+      "especes_observees_donnees": [
+        "Da"
+      ]
+    },
+    {
+      "nom": "Goana",
+      "espece": "Da",
+      "nom_scientifique": "Dioscorea alata",
+      "code_ou_origine": "Traditionnelle",
+      "identifiant_moteur": "GOANA",
+      "code_donnees_legacy": "GOANA",
+      "fiche_pdf": "Goana_Da_Traditionnelle.pdf",
+      "fiche_url_relative": "fiches-varietales/Goana_Da_Traditionnelle.pdf",
+      "espece_legacy": "Da",
+      "aliases_donnees": [
+        "GOANA"
+      ],
+      "especes_observees_donnees": [
+        "Da"
+      ]
+    },
+    {
+      "nom": "GrosseCaille",
+      "espece": "Dr",
+      "nom_scientifique": "Dioscorea rotundata",
+      "code_ou_origine": "Traditionnelle",
+      "identifiant_moteur": "GROSSECAILLE",
+      "code_donnees_legacy": "GROSSECAILLE",
+      "fiche_pdf": "GrosseCaille_Dr_Traditionnelle.pdf",
+      "fiche_url_relative": "fiches-varietales/GrosseCaille_Dr_Traditionnelle.pdf",
+      "espece_legacy": "Dcr",
+      "aliases_donnees": [
+        "GROSSECAILLE"
+      ],
+      "especes_observees_donnees": [
+        "Da",
+        "Dcr"
+      ]
+    },
+    {
+      "nom": "Gwadinra",
+      "espece": "Da",
+      "nom_scientifique": "Dioscorea alata",
+      "code_ou_origine": "INRAX142",
+      "identifiant_moteur": "INRAX142",
+      "code_donnees_legacy": "INRAX142",
+      "fiche_pdf": "Gwadinra_Da_INRAX142.pdf",
+      "fiche_url_relative": "fiches-varietales/Gwadinra_Da_INRAX142.pdf",
+      "espece_legacy": "Da",
+      "aliases_donnees": [
+        "INRAX142"
+      ],
+      "especes_observees_donnees": [
+        "Da"
+      ]
+    },
+    {
+      "nom": "INRA15",
+      "espece": "Da",
+      "nom_scientifique": "Dioscorea alata",
+      "code_ou_origine": "INRA15",
+      "identifiant_moteur": "INRA15",
+      "code_donnees_legacy": "INRA15",
+      "fiche_pdf": "INRA15_Da_INRA15.pdf",
+      "fiche_url_relative": "fiches-varietales/INRA15_Da_INRA15.pdf",
+      "espece_legacy": "Da",
+      "aliases_donnees": [
+        "INRA15"
+      ],
+      "especes_observees_donnees": [
+        "Da"
+      ]
+    },
+    {
+      "nom": "INRAAL18",
+      "espece": "Da",
+      "nom_scientifique": "Dioscorea alata",
+      "code_ou_origine": "INRAAL18",
+      "identifiant_moteur": "INRAAL18",
+      "code_donnees_legacy": "INRAAL18",
+      "fiche_pdf": "INRAAL18_Da_INRAAL18.pdf",
+      "fiche_url_relative": "fiches-varietales/INRAAL18_Da_INRAAL18.pdf",
+      "espece_legacy": "Da",
+      "aliases_donnees": [
+        "INRAAL18"
+      ],
+      "especes_observees_donnees": [
+        "Da",
+        "Dcr"
+      ]
+    },
+    {
+      "nom": "INRAAL56",
+      "espece": "Da",
+      "nom_scientifique": "Dioscorea alata",
+      "code_ou_origine": "INRAAL56",
+      "identifiant_moteur": "INRAAL56",
+      "code_donnees_legacy": "INRAAL56",
+      "fiche_pdf": "INRAAL56_Da_INRAAL56.pdf",
+      "fiche_url_relative": "fiches-varietales/INRAAL56_Da_INRAAL56.pdf",
+      "espece_legacy": "Da",
+      "aliases_donnees": [
+        "INRAAL56"
+      ],
+      "especes_observees_donnees": [
+        "Da"
+      ]
+    },
+    {
+      "nom": "Jano",
+      "espece": "Dr",
+      "nom_scientifique": "Dioscorea rotundata",
+      "code_ou_origine": "INRACJ",
+      "identifiant_moteur": "JANO",
+      "code_donnees_legacy": "INRACJ",
+      "fiche_pdf": "Jano_Dr_INRACJ.pdf",
+      "fiche_url_relative": "fiches-varietales/Jano_Dr_INRACJ.pdf",
+      "espece_legacy": "Dcr",
+      "aliases_donnees": [
+        "INRACJ",
+        "JANO"
+      ],
+      "especes_observees_donnees": [
+        "Dcr"
+      ]
+    },
+    {
+      "nom": "Kabusah",
+      "espece": "Da",
+      "nom_scientifique": "Dioscorea alata",
+      "code_ou_origine": "Traditionnelle",
+      "identifiant_moteur": "KABUSAH",
+      "code_donnees_legacy": "KABUSAH",
+      "fiche_pdf": "Kabusah_Da_Traditionnelle.pdf",
+      "fiche_url_relative": "fiches-varietales/Kabusah_Da_Traditionnelle.pdf",
+      "espece_legacy": "Da",
+      "aliases_donnees": [
+        "KABUSAH"
+      ],
+      "especes_observees_donnees": [
+        "Da"
+      ]
+    },
+    {
+      "nom": "Karukinra",
+      "espece": "Da",
+      "nom_scientifique": "Dioscorea alata",
+      "code_ou_origine": "INRAX154",
+      "identifiant_moteur": "INRAX154",
+      "code_donnees_legacy": "INRAX154",
+      "fiche_pdf": "Karukinra_Da_INRAX154.pdf",
+      "fiche_url_relative": "fiches-varietales/Karukinra_Da_INRAX154.pdf",
+      "espece_legacy": "Da",
+      "aliases_donnees": [
+        "INRAX154"
+      ],
+      "especes_observees_donnees": [
+        "Da"
+      ]
+    },
+    {
+      "nom": "Kinabayo",
+      "espece": "Da",
+      "nom_scientifique": "Dioscorea alata",
+      "code_ou_origine": "Traditionnelle",
+      "identifiant_moteur": "KINABAYO",
+      "code_donnees_legacy": "KINABAYO",
+      "fiche_pdf": "Kinabayo_Da_Traditionnelle.pdf",
+      "fiche_url_relative": "fiches-varietales/Kinabayo_Da_Traditionnelle.pdf",
+      "espece_legacy": "Da",
+      "aliases_donnees": [
+        "KINABAYO"
+      ],
+      "especes_observees_donnees": [
+        "Da"
+      ]
+    },
+    {
+      "nom": "Malalagi",
+      "espece": "Da",
+      "nom_scientifique": "Dioscorea alata",
+      "code_ou_origine": "Vanuatu",
+      "identifiant_moteur": "MALALAGI",
+      "code_donnees_legacy": "CIRAD178",
+      "fiche_pdf": "Malalagi_Da_Vanuatu.pdf",
+      "fiche_url_relative": "fiches-varietales/Malalagi_Da_Vanuatu.pdf",
+      "espece_legacy": "Da",
+      "aliases_donnees": [
+        "CIRAD178",
+        "MALALAGHI",
+        "MALALAGI"
+      ],
+      "especes_observees_donnees": [
+        "Da"
+      ]
+    },
+    {
+      "nom": "Manlankon",
+      "espece": "Da",
+      "nom_scientifique": "Dioscorea alata",
+      "code_ou_origine": "Vanuatu",
+      "identifiant_moteur": "MANLANKON",
+      "code_donnees_legacy": "CIRAD143",
+      "fiche_pdf": "Manlankon_Da_Vanuatu.pdf",
+      "fiche_url_relative": "fiches-varietales/Manlankon_Da_Vanuatu.pdf",
+      "espece_legacy": "Da",
+      "aliases_donnees": [
+        "CIRAD143",
+        "MANLANKON"
+      ],
+      "especes_observees_donnees": [
+        "Da"
+      ]
+    },
+    {
+      "nom": "Marchande",
+      "espece": "Da",
+      "nom_scientifique": "Dioscorea alata",
+      "code_ou_origine": "CIRADH4X347",
+      "identifiant_moteur": "MARCHANDE",
+      "code_donnees_legacy": "CIRADH4X347",
+      "fiche_pdf": "Marchande_Da_CIRADH4X347.pdf",
+      "fiche_url_relative": "fiches-varietales/Marchande_Da_CIRADH4X347.pdf",
+      "espece_legacy": "Da",
+      "aliases_donnees": [
+        "CIRADH4X347",
+        "MARCHANDE"
+      ],
+      "especes_observees_donnees": [
+        "Da"
+      ]
+    },
+    {
+      "nom": "Nureangdan",
+      "espece": "Da",
+      "nom_scientifique": "Dioscorea alata",
+      "code_ou_origine": "Vanuatu",
+      "identifiant_moteur": "NUREANGDAN",
+      "code_donnees_legacy": "CIRAD202",
+      "fiche_pdf": "Nureangdan_Da_Vanuatu.pdf",
+      "fiche_url_relative": "fiches-varietales/Nureangdan_Da_Vanuatu.pdf",
+      "espece_legacy": "Da",
+      "aliases_donnees": [
+        "CIRAD202",
+        "NUREANGDAN"
+      ],
+      "especes_observees_donnees": [
+        "Da"
+      ]
+    },
+    {
+      "nom": "Orgal",
+      "espece": "Dr",
+      "nom_scientifique": "Dioscorea rotundata",
+      "code_ou_origine": "INRACO507",
+      "identifiant_moteur": "ORGAL",
+      "code_donnees_legacy": "INRACO507",
+      "fiche_pdf": "Orgal_Dr_INRACO507.pdf",
+      "fiche_url_relative": "fiches-varietales/Orgal_Dr_INRACO507.pdf",
+      "espece_legacy": "Dcr",
+      "aliases_donnees": [
+        "INRACO507",
+        "ORGAL"
+      ],
+      "especes_observees_donnees": [
+        "Dcr"
+      ]
+    },
+    {
+      "nom": "Pacala",
+      "espece": "Da",
+      "nom_scientifique": "Dioscorea alata",
+      "code_ou_origine": "Traditionnelle",
+      "identifiant_moteur": "PAKALA",
+      "code_donnees_legacy": "PAKALA",
+      "fiche_pdf": "Pacala_Da_Traditionnelle.pdf",
+      "fiche_url_relative": "fiches-varietales/Pacala_Da_Traditionnelle.pdf",
+      "espece_legacy": "Da",
+      "aliases_donnees": [
+        "PAKALA"
+      ],
+      "especes_observees_donnees": [
+        "Da"
+      ]
+    },
+    {
+      "nom": "Roujol",
+      "espece": "Da",
+      "nom_scientifique": "Dioscorea alata",
+      "code_ou_origine": "CIRADH4X242",
+      "identifiant_moteur": "ROUJOL",
+      "code_donnees_legacy": "CIRADH4X242",
+      "fiche_pdf": "Roujol_Da_CIRADH4X242.pdf",
+      "fiche_url_relative": "fiches-varietales/Roujol_Da_CIRADH4X242.pdf",
+      "espece_legacy": "Da",
+      "aliases_donnees": [
+        "CIRADH4X242",
+        "ROUJOL"
+      ],
+      "especes_observees_donnees": [
+        "Da"
+      ]
+    },
+    {
+      "nom": "Tibou",
+      "espece": "Dr",
+      "nom_scientifique": "Dioscorea rotundata",
+      "code_ou_origine": "CIRAD7F",
+      "identifiant_moteur": "TIBOU",
+      "code_donnees_legacy": "CIRAD7F",
+      "fiche_pdf": "Tibou_Dr_CIRAD7F.pdf",
+      "fiche_url_relative": "fiches-varietales/Tibou_Dr_CIRAD7F.pdf",
+      "espece_legacy": "Dcr",
+      "aliases_donnees": [
+        "CIRAD7F",
+        "TIBOU"
+      ],
+      "especes_observees_donnees": [
+        "Da",
+        "Dcr"
+      ]
+    },
+    {
+      "nom": "TiClair",
+      "espece": "Dr",
+      "nom_scientifique": "Dioscorea rotundata",
+      "code_ou_origine": "CIRAD49M",
+      "identifiant_moteur": "TICLAIR",
+      "code_donnees_legacy": "CIRAD49M",
+      "fiche_pdf": "TiClair_Dr_CIRAD49M.pdf",
+      "fiche_url_relative": "fiches-varietales/TiClair_Dr_CIRAD49M.pdf",
+      "espece_legacy": "Dcr",
+      "aliases_donnees": [
+        "CIRAD49M",
+        "TICLAIR"
+      ],
+      "especes_observees_donnees": [
+        "Dcr"
+      ]
+    },
+    {
+      "nom": "Ticoli",
+      "espece": "Da",
+      "nom_scientifique": "Dioscorea alata",
+      "code_ou_origine": "CIRADH4X274",
+      "identifiant_moteur": "TICOLI",
+      "code_donnees_legacy": "CIRADH4X274",
+      "fiche_pdf": "Ticoli_Da_CIRADH4X274.pdf",
+      "fiche_url_relative": "fiches-varietales/Ticoli_Da_CIRADH4X274.pdf",
+      "espece_legacy": "Da",
+      "aliases_donnees": [
+        "CIRADH4X274",
+        "TICOLI"
+      ],
+      "especes_observees_donnees": [
+        "Da"
+      ]
+    },
+    {
+      "nom": "TiViolet",
+      "espece": "Da",
+      "nom_scientifique": "Dioscorea alata",
+      "code_ou_origine": "CIRADH4X105",
+      "identifiant_moteur": "TIVIOLET",
+      "code_donnees_legacy": "CIRADH4X105",
+      "fiche_pdf": "TiViolet_Da_CIRADH4X105.pdf",
+      "fiche_url_relative": "fiches-varietales/TiViolet_Da_CIRADH4X105.pdf",
+      "espece_legacy": "Da",
+      "aliases_donnees": [
+        "CIRADH4X105",
+        "TIVIOLET"
+      ],
+      "especes_observees_donnees": [
+        "Da"
+      ]
+    }
+  ],
+  "anomalies_nomenclature_source": [
+    {
+      "genotype": "TIBOU",
+      "fichier": "emergence.csv",
+      "alias_var": "CIRAD7F",
+      "espece_observee": "Da",
+      "espece_attendue_legacy": "Dcr",
+      "n_lignes": 42
+    },
+    {
+      "genotype": "GROSSECAILLE",
+      "fichier": "emergence.csv",
+      "alias_var": "GROSSECAILLE",
+      "espece_observee": "Da",
+      "espece_attendue_legacy": "Dcr",
+      "n_lignes": 41
+    },
+    {
+      "genotype": "TIBOU",
+      "fichier": "recouvrement.csv",
+      "alias_var": "CIRAD7F",
+      "espece_observee": "Da",
+      "espece_attendue_legacy": "Dcr",
+      "n_lignes": 1
+    },
+    {
+      "genotype": "INRAAL18",
+      "fichier": "rec_pesee.csv",
+      "alias_var": "INRAAL18",
+      "espece_observee": "Dcr",
+      "espece_attendue_legacy": "Da",
+      "n_lignes": 72
+    },
+    {
+      "genotype": "TIBOU",
+      "fichier": "stockage.csv",
+      "alias_var": "CIRAD7F",
+      "espece_observee": "Da",
+      "espece_attendue_legacy": "Dcr",
+      "n_lignes": 5
+    }
+  ],
+  "regles_import_recommandees": [
+    "Normaliser Var en majuscules sans espaces.",
+    "Résoudre d'abord Var via aliases_donnees vers identifiant_moteur.",
+    "Attribuer ensuite l'espèce canonique depuis ce JSON (Da ou Dr), au lieu de faire du couple (Var, Sp) une clé.",
+    "Convertir Dcr en Dr pour la nouvelle application.",
+    "Conserver les valeurs source erronées uniquement pour audit, pas pour le filtrage métier."
+  ]
+}
+;

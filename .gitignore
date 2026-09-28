@@ -1,0 +1,17 @@
+.DS_Store
+Thumbs.db
+desktop.ini
+
+*.log
+*.tmp
+*.temp
+
+.env
+.env.*
+!.env.example
+
+node_modules/
+.cache/
+dist/
+build/
+
