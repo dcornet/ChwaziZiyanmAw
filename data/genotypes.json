@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "description": "Concordance canonique des 28 génotypes utilisés par VaPaDONF, avec alias compatibles avec les nomenclatures réellement observées dans les fichiers source.",
+  "description": "Concordance canonique des 28 génotypes utilisés par Chwazi ziyanm a-w !, avec alias compatibles avec les nomenclatures réellement observées dans les fichiers source.",
   "conventions": {
     "nom": "Nom vernaculaire à afficher en priorité.",
     "espece": "Da = Dioscorea alata ; Dr = Dioscorea rotundata. Dr remplace le code legacy Dcr dans la nouvelle application.",

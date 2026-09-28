@@ -1,4 +1,4 @@
-# VaPaDONF — réimplémentation statique V1
+# Chwazi ziyanm a-w ! — réimplémentation statique V1
 
 Cette version remplace l'application R/Shiny par une page HTML/CSS/JavaScript autonome, conçue pour GitHub Pages.
 
